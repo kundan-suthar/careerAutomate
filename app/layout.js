@@ -12,7 +12,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider afterSignOutUrl="/" appearance={{
+      elements: {
+        avatarBox: "h-12 w-12",
+      }
+    }}>
 
       <html lang="en" suppressHydrationWarning >
         <body
