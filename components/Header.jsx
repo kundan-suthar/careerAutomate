@@ -68,7 +68,14 @@ const Header = () => {
                     </SignedOut>
                     <SignedIn>
                         <UserButton
-
+                            appearance={{
+                                elements: {
+                                    avatarBox: "w-10 h-10",
+                                    userButtonPopoverCard: "shadow-xl",
+                                    userPreviewMainIdentifier: "font-semibold",
+                                    signOutButton: "text-red-500 hover:bg-red-100",
+                                },
+                            }}
                         />
                     </SignedIn>
                 </div>
