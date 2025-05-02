@@ -1,8 +1,13 @@
 import { industries } from '@/data/industries'
 import React from 'react'
 import OnBoardingForm from './_components/onboarding-form'
-
-const Onboarding = () => {
+import { getUserOnBoardingStatus } from '@/actions/user'
+import { redirect } from 'next/navigation'
+const Onboarding = async () => {
+    const { isOnBoarded } = await getUserOnBoardingStatus();
+    if (isOnBoarded) {
+        redirect("/dashboard")
+    }
     return (
         <div>
 
